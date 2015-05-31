@@ -1,0 +1,26 @@
+# This requirements file lists all third-party dependencies for this project.
+#
+# Run 'pip install -r requirements.txt -t lib/' to install these dependencies
+# in `lib/` subdirectory.
+#
+# Note: The `lib` directory is added to `sys.path` by `appengine_config.py`.
+Flask-RESTful==0.3.3
+Flask==0.10.1
+Jinja2==2.7.3
+MarkupSafe==0.23
+Werkzeug==0.10.4
+aniso8601==1.0.0
+argparse==1.2.1
+google-api-python-client==1.4.0
+httplib2==0.9.1
+itsdangerous==0.24         
+oauth2client==1.4.11       
+pyasn1-modules==0.0.5        
+pyasn1==0.1.7        
+rsa==3.1.4 
+simplejson==3.7.2        
+six==1.9.0
+uritemplate==0.6          
+wsgiref==0.1.2 
+yolk==0.4.3        
+flask-cors
