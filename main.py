@@ -15,7 +15,7 @@ api = Api(app)
 cors = CORS(app)
 
 
-ALLOWED_VIDEO_EXT = ["mp4", "m4v", "mov", "avi", "mkv", "x-msvideo"]
+ALLOWED_VIDEO_EXT = ["mp4", "m4v", "mov", "avi", "mkv", "x-msvideo", "octet-stream"]
 		
 class Video(Resource):
 
@@ -49,7 +49,8 @@ class Video(Resource):
 			resp = req.execute()
 			return {"success": True, "resp": resp}
 		except Exception as e:
-			abort(400, **e.data)
+			error = e.data if 'data' in e.__dict__ else {"success":False, "message":e.content}
+			abort(400, **error)
 
 api.add_resource(Video, '/videos')
 
